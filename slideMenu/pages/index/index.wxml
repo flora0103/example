@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <view class="menuView">
+    <!--menu box star-->  
+        <view class="menu-box"  animation='{{fromLeft}}' >
+              <!--openmenu  star-->  
+              <image  bindtap="bindMenuShow"   class="open" src="../../images/1.png" mode="widthFix"></image>
+              <view class="menu-main">
+                    <!--menu 1 star-->
+                    <view  bindtap="bindsubShow" data-nav="0">
+                       <text class="menu">item1</text>
+                        <view class="{{subShow[0]?'':'sub-hide'}}" >
+                            <text class="submenu">item1-1</text>
+                            <text  class="submenu">item1-1</text>
+                        </view>
+                     </view>
+              <!--menu 2 star-->
+              <view   bindtap="bindsubShow" data-nav="1">
+                  <text  class="menu">item2</text>
+                    <view class="{{subShow[1]?'':'sub-hide'}}">
+                            <text  class="submenu">item2-1</text>
+                            <text  class="submenu">item2-1</text>
+                    </view>
+              </view>
+             <!--menu 3 star-->
+            <view  bindtap="bindsubShow" data-nav="2">
+                 <text  class="menu">item3</text>
+                <view class="{{subShow[2]?'':'sub-hide'}}">
+                      <text  class="submenu">item3-1</text>
+                      <text  class="submenu">item3-1</text>
+                  </view>
+              </view>
+            <!--menu 4 star-->
+            <view  bindtap="bindsubShow" data-nav="3">
+                <text  class="menu">item4</text>
+                    <view class="{{subShow[3]?'':'sub-hide'}}">
+                        <text  class="submenu">item4-1</text>
+                        <text  class="submenu">item4-1</text>
+                    </view>
+              </view>
+              <!--menu 5 star-->
+              <view  data-num="8"  >
+                     <text  class="menu">item5</text>
+              </view>
+              <!--menu 6 star-->
+              <view   bindtap="bindsubShow" data-nav="4">
+                        <text  class="menu">item6</text>
+                        <view  class="{{subShow[4]?'':'sub-hide'}}">
+                              <text  class="submenu">item6-1</text>
+                              <text  class="submenu">item6-2</text>
+                              <text  class="submenu">item6-3</text>
+                              <text  class="submenu">item6-4</text>
+                      </view>
+          
+              </view>
+            <!--menu 6 end-->
+  </view>
+  </view>
+  </view>
+</view>
